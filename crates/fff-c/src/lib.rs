@@ -344,6 +344,7 @@ pub unsafe extern "C" fn fff_live_grep(
         time_budget_ms: opts.time_budget_ms.unwrap_or(0),
         before_context: opts.before_context.unwrap_or(0),
         after_context: opts.after_context.unwrap_or(0),
+        classify_definitions: opts.classify_definitions.unwrap_or(false),
     };
 
     let result =
@@ -428,6 +429,7 @@ pub unsafe extern "C" fn fff_multi_grep(
         time_budget_ms: opts.time_budget_ms.unwrap_or(0),
         before_context: opts.before_context.unwrap_or(0),
         after_context: opts.after_context.unwrap_or(0),
+        classify_definitions: opts.classify_definitions.unwrap_or(false),
     };
 
     let result =

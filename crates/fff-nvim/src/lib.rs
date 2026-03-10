@@ -314,6 +314,7 @@ pub fn live_grep(
         time_budget_ms: time_budget_ms.unwrap_or(0),
         before_context: 0,
         after_context: 0,
+        classify_definitions: false,
     };
 
     let result = fff_core::grep::grep_search(picker.get_files(), &query, parsed.as_ref(), &options);
